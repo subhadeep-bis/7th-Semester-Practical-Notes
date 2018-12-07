@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<div>
+		<form method="get" action="https://www.google.com" id="form1">
+			<input type="text" name="name" size="30" id="name" placeholder="Enter your name" onblur="isTheFieldEmpty(this, document.getElementById('name_help'));">
+			<span id="name_help"></span>
+		</form>
+		<button form="form1" type="submit" value="submit">submit</button>
+	</div>
+	<script type="text/javascript">
+		function editText(regex, input, helpId, helpMessage){
+			if(!regex.test(input)){
+				if(helpId != null)
+					while(helpId.childNodes[0]) {
+						helpId.removeChild(helpId.childNodes[0]);
+					}
+					helpId.appendChild(document.createTextNode(helpMessage));
+			} else {
+				if(helpId != null){
+					while(helpId.childNodes[0]) {
+						helpId.removeChild(helpId.childNodes[0]);
+					}
+				}
+			}
+		}
+		function isTheFieldEmpty(inputField, helpId){
+			return editText(/[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{1,20}$/, inputField.value, helpId, "Please Enter a valid name");
+		}
+	</script>
+</body>
+</html>

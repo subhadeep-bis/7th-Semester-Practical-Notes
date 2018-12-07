@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+		td{
+			border: 0px;
+			padding: 3px;
+		}
+		#studentReg{
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-bottom: 10px;
+		}
+		div{
+			border: 2px solid black;
+			margin-left: 250px;
+			margin-right: 250px;
+			padding-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<form method="GET" action="https://www.google.com" id="form1">
+			<h2>REGISTRATION</h2>
+			<table id="studentReg" border="0">
+				<tr>
+					<td>
+						<label for="firstName"><b>First Name:</b></label>
+					</td>
+					<td>
+						<input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
+					</td>
+					<td>
+						<label for="lastName"><b>Last Name:</b></label>
+					</td>
+					<td>
+						<input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="emailID"><b>Email:</b></label>
+					</td>
+					<td>
+						<input type="email" id="emailID" name="emailID" placeholder="Enter Email">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="gender"><b>Gender:</b></label>
+					</td>
+					<td colspan="3">
+						<input type="radio" class="gender" name="gender" value="male"> Male 
+						<input type="radio" class="gender" name="gender" value="female"> Female 
+						<input type="radio" class="gender" name="gender" value="other"> Other
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="hobby"><b>Hobbies:</b></label>
+					</td>
+					<td colspan="3">
+						<input type="checkbox" class="hobby" name="hobby" value="Trekking"> Trekking <br>
+						<input type="checkbox" class="hobby" name="hobby" value="Music"> Music <br>
+						<input type="checkbox" class="hobby" name="hobby" value="Playing Computer Games"> Computer Games <br>
+						<textarea rows="3" cols="55" placeholder="Mention other hobbies..."></textarea>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<button type="submit" form="form1" value="Submit">Submit</button>
+		<button type="submit" form="form1" value="Reset">Reset</button>
+	</div>
+</body>
+</html>

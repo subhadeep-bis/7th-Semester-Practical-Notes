@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+	<style type="text/css">
+		td {
+    		border: 0px;
+    		padding: 3px;
+		}
+		th {
+			border-left: 0px;
+			border-right: 0px;
+		}
+		#studentReg {
+			padding-top:10px;
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-bottom: 10px;
+		}
+		#qualification {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<table id="studentReg" border="1">
+		<tr>
+			<td class="studentReg">
+				<label for="studentName"><b>Name:</b></label>
+			</td>
+			<td class="studentReg">
+				<input type="text" name="Name" id="studentName" placeholder="Enter Name">
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="phoneNumber"><b>Phone Number:</b></label>
+			</td>
+			<td class="studentReg">
+				<input type="number" name="number" id="phoneNumber" placeholder="Enter Email">
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="emailID"><b>Email:</b></label>
+			</td>
+			<td class="studentReg">
+				<input type="email" name="mail" id="emailID" placeholder="Enter Mail">
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="registrationNumber"><b>Registration Number:</b></label>
+			</td>
+			<td class="studentReg">
+				<input type="number" name="registration" id="registrationNumber" placeholder="Enter Registration Number">
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="address"><b>Address:</b></label>
+			</td>
+			<td class="studentReg">
+				<textarea id="address" placeholder="Enter Address" rows="5" cols="30"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="gender"><b>Gender:</b></label>
+			</td>
+			<td class="studentReg">
+				<input id="gender" type="radio" name="gender" value="Male"> Male 
+				<input id="gender" type="radio" name="gender" value="Female"> Female 
+				<input id="gender" type="radio" name="gender" value="other"> Other
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="hobbies"><b>Hobbies:</b></label>
+			</td>
+			<td  class="studentReg">
+				<input id="hobbies" type="checkbox" name="hobby" value="playing"> Playing <br>
+				<input id="hobbies" type="checkbox" name="hobby" value="travelling"> Travelling <br>
+				<input id="hobbies" type="checkbox" name="hobby" value="readingBooks"> Reading Books <br>
+				<textarea id="hobbies" placeholder="Mention others..." rows="2" cols="30"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="stream"><b>Stream:</b></label>
+			</td>
+			<td class="studentReg">
+				<select id="stream">
+					<option value="null">--</option>
+					<option value="btech">B.Tech</option>
+					<option value="bca">BCA</option>
+					<option value="mtech">M.Tech</option>
+					<option value="mca">MCA</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="studentReg">
+				<label for="branch"><b>Branch:</b></label>
+			</td>
+			<td class="studentReg">
+				<select id="branch">
+					<option value="null">--</option>
+					<option value="cse">CSE</option>
+					<option value="ece">ECE</option>
+					<option value="mechanical">Mechanical</option>
+					<option value="electrical">Electrical</option>
+					<option value="civil">Civil</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<p></p>
+	<table border="1" id="qualification">
+		<tr>
+			<th>Degree/Certificate</th>
+			<th>Degree</th>
+			<th>Discipline</th>
+			<th>Institute</th>
+			<th>Board/University</th>
+			<th>Year of Passing</th>
+			<th>Aggregate % / CGPA</th>
+		</tr>
+		<tr>
+			<td align="center">10th</td>
+			<td align="center">AISSE</td>
+			<td align="center">N.A.</td>
+			<td align="center">Army Public School Barrackpore</td>
+			<td align="center">CBSE</td>
+			<td align="center">2013</td>
+			<td align="center">9</td>
+		</tr>
+		<tr>
+			<td align="center">12th</td>
+			<td align="center">AISSCE</td>
+			<td align="center">Science</td>
+			<td align="center">Army Public School Barrackpore</td>
+			<td align="center">CBSE</td>
+			<td align="center">2015</td>
+			<td align="center">81.66</td>
+		</tr>
+		<tr>
+			<td align="center">Graduation</td>
+			<td align="center">B.Tech</td>
+			<td align="center">CSE</td>
+			<td align="center">University of Engineering and Management Kolkata</td>
+			<td align="center">University of Engineering and Management Kolkata</td>
+			<td align="center">2019</td>
+			<td align="center">9.39</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

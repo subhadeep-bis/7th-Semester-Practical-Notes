@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question. 69</title>
+	<style type="text/css">
+		div	{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left:5px;
+		}
+		#first {
+			border: solid black 2px;
+			margin-right: 75%;
+			padding: 5px;
+		}
+		/* Popup container */
+		.popup {
+		    position: relative;
+		    display: inline-block;
+		    cursor: pointer;
+		}
+
+		/* The actual popup (appears on top) */
+		.popup .popuptext {
+		    visibility: hidden;
+		    width: 160px;
+		    background-color: #555;
+		    color: #fff;
+		    text-align: center;
+		    border-radius: 6px;
+		    padding: 8px 0;
+		    position: absolute;
+		    z-index: 1;
+		    bottom: 125%;
+		    left: 50%;
+		    margin-left: -80px;
+		}
+
+		/* Popup arrow */
+		.popup .popuptext::after {
+		    content: "";
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    margin-left: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: #555 transparent transparent transparent;
+		}
+
+		/* Toggle this class when clicking on the popup container (hide and show the popup) */
+		.popup .show {
+		    visibility: visible;
+		    -webkit-animation: fadeIn 1s;
+		    animation: fadeIn 1s
+		}
+
+		/* Add animation (fade in the popup) */
+		@-webkit-keyframes fadeIn {
+		    from {opacity: 0;} 
+		    to {opacity: 1;}
+		}
+
+		@keyframes fadeIn {
+		    from {opacity: 0;}
+		    to {opacity:1 ;}
+		}
+	</style>
+</head>
+<body>
+	<div id="first">
+		<form method="GET" action="https://www.google.com" id="form1">
+			<div>
+				<label for="name"><b>Name:</b>&nbsp</label>
+				<input type="text" name="Name" id="name" placeholder="Enter Name">
+			</div>
+			<div>
+				<label for="address"><b>Address:</b>&nbsp</label>
+				<textarea id="address" placeholder="Enter your address here" rows="5" cols="30"></textarea>
+			</div>
+			<div>
+				<label for="hobbies"><b>Hobbies:</b>&nbsp</label>
+				<input type="checkbox" name="hobby" id="hobbies" value="singing">Singing 
+				<input type="checkbox" name="hobby" id="hobbies" value="joking"> Joking 
+			</div>
+			<div>
+				<ol>
+					<li>Hello</li>
+					<li>World!</li>
+					<li>:)</li>
+				</ol>
+			</div>
+			<div>
+				<label for="gender"><b>Gender:</b>&nbsp</label>
+				<input type="radio" name="gender" id="gender" value="male"> Male 
+				<input type="radio" name="gender" id="gender" value="female"> Female
+				<input type="radio" name="gender" id="gender" value="other"> Other
+			</div>
+			<div>
+				<label for="password"><b>Password:</b>&nbsp</label>
+				<input type="text" name="password" id="password" placeholder="Enter Password">
+			</div>
+			<div class="popup" onclick="myFunction()">Click me!
+				<span class="popuptext" id="myPopup">Popup text...</span>
+			</div>
+		</form>
+		<button type="submit" form="form1">Submit</button>
+		<button type="submit" form="form1">Reset</button>
+	</div>
+	<script type="text/javascript">
+		// When the user clicks on <div>, open the popup
+		function myFunction() {
+		    var popup = document.getElementById("myPopup");
+		    popup.classList.toggle("show");
+		}
+	</script>
+</body>
+</html>

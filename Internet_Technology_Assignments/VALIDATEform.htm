@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validate(){          
+    if(!(document.getElementById("name").value).match(/^[ A-Za-z]+$/)){
+       window.alert("Invalid NAME. Please try again.")
+    }  
+    if(!(document.getElementById("number").value).match(/^[0-9]+$/)){
+        window.alert("Invalid NUMBER. Please try again.")
+    }  
+    if(!(document.getElementById("email").value).match(/(\w+)\@(\w+)\.[a-zA-Z]/g)){
+       window.alert("Invalid EMAIL. Please try again.")
+    }
+    
+    if((document.getElementById("password").value).match(/^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{4,8}$/)){
+       window.alert("Invalid password. Please try again.")
+       //Password must be between 4 and 8 digits long and include at least one numeric digit.
+    }
+       
+}
+
+    </script>
+</head>
+<body>
+
+<h1>Question 1</h1>
+    <form>
+      <fieldset>
+        
+        <p>
+          <label>NAME</label>
+          <input id="name" type="text" required>
+            <span id="nameerr" style="display:none">Invalid name</span>
+        </p>
+        <p>
+          <label>PHONE NO</label>
+          <input id="number" type="number">
+        </p>
+	<p>
+          <label>EMAIL ID</label>
+          <input id="email"  type="text">
+        </p>
+          <p>
+          <label>PASSWORD</label>
+          <input id="password" type="password">
+        </p>
+        <p>
+          <label>ADDRESS</label>
+          <textarea rows="3" cols="80"></textarea>
+        </p>
+
+	<p>
+          <label>GENDER</label>            
+          <input type="radio" value="male">
+          <label>male</label>
+          <input type="radio" value="female">
+          <label>female</label>
+         </p>  
+	<p>
+           <label>HOBBY</label>
+             <input type="checkbox" value="football">
+             <label>Games</label>
+             <input type="checkbox" value="dancing">
+             <label>Dancing</label>
+	 <input type="checkbox" value="singing">
+             <label>Singing</label>
+         </p>     
+	<p>
+             <label>STREAM</label>
+             <select>
+               <option value="1">B.Tech</option>
+               <option value="2">M.Tech</option>
+               <option value="3">MCA</option>
+               <option value="4">MBA</option>
+             </select>
+          </p>
+	<p>
+             <label>BRANCH</label>
+             <select>
+               <option value="1">CSE</option>
+               <option value="2">ECE</option>
+               <option value="3">ME</option>
+               <option value="4">HR</option>
+             </select>
+          </p>
+          <input type="submit" value="submit" onClick="validate()" >
+      </fieldset>
+    </form>
+</body>
+</html>

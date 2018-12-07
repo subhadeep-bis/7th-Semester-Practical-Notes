@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="a.js"></script>
+	<style type="text/css">
+		.hidden{display: none;}
+		.show{display:inline !important;}
+	</style>
+</head>
+<body>
+	<a href="Javascript:void(0)" onClick="openAlert('Hello');">Say Hello</a> <br>
+	<a href="Javascript:void(0)" onClick="alert('Hi! how are you?');">Say Something</a> <br>
+	<a href="Javascript:void(0)" onmouseover="this.style.color='red';" onmouseout="this.style.color='blue';" ondblclick="this.text='you double clicked me';" onmousedown="this.text='Don\'t press too hard';" onmouseup="this.text='Thank you!';">Color Change</a> <br>
+	<input type="text" id="randInput" onChange="var dataEntered = document.getElementById('randInput').value; alert('User typed, '+ dataEntered);">
+
+	<form action="#" id=sampForm>
+		<input id="charInput" type="text" name="">
+		<p id="keyData">Key Data here</p>
+
+		<input type="submit" value=submit name="">
+		<input type="reset" value="reset" name="">
+
+	</form> <br>
+
+	<img src="https://image.shutterstock.com/image-vector/flat-design-handshake-icon-logo-260nw-1146835637.jpg" id="logo">
+
+	<button id="logoButton">Get Logo</button>
+	<input id="mouseInput" type="text" size="30" name=""> <br>
+
+	Mouse X: <input type="text" id="mouseX" name=""> <br>
+	Mouse Y: <input type="text" id="mouseY" name=""> <br>
+
+	<script type="text/javascript">
+		function getChar(event){
+			if(event.which==null){
+				return String.fromCharCode(event.keyCode);
+			} else if (event.which != 0 && event.charCode!=0) {
+				return String.fromCharCode(event.which);
+			} else {
+				return null;
+			}
+		}	
+		document.getElementById('charInput').onkeypress = function(event){
+			var char = getChar(event || window.event)
+			if(!char) return false;
+
+			document.getElementById('keyData').innerHTML = char + " was clicked";
+			return true;
+		}
+		document.getElementById('charInput').onfocus = function(event) {
+			document.getElementById('keyData').innerHTML = "Input Gained Focus";
+		}
+		document.getElementById('charInput').onselect = function(event) {
+			document.getElementById('keyData').innerHTML = "Text Selected";
+		}
+		document.getElementById('logoButton').onClick = function(event) {
+			document.getElementById('logo').className = "show";
+		}
+		document.getElementById('logo').onClick = function(event) {
+			document.getElementById('logo').className = "hidden";
+		}
+	</script>
+
+</body>
+</html>
